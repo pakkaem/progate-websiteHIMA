@@ -1,0 +1,46 @@
+/* navbar responsive */
+
+@media all and (max-width: 1000px) {
+    .item {
+    }
+    .card-news {
+        width: 100%;
+    }
+    .btn {
+        margin-bottom: 50px;
+    }
+    .btn-news {
+        padding: 12px 120px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .item {
+      width: 100%;
+    }
+}
+@media all and (max-width: 670px){
+    .content{
+        width: 50%;
+    }
+    .kegiatan-card img{
+        width: 130px;
+    }
+
+    .kegiatan-card p{
+        font-size: 14px;
+    }
+    .item {
+        width: 50%;
+    }
+    .card-news {
+        width: 100%;
+    }
+    .rectangle-orange li {
+        float: none;
+        width: 100%;
+      }
+    .rectangle-orange {
+        text-align: center;
+    }   
+}

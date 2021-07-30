@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* navbar */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+nav {
+  color: #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  /* background-color: rgba(104, 52, 52, 0.1); */
+  background-color: transparent;
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+}
+
+.logo {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.logo img {
+  margin: 10px 0;
+  width: 83px;
+  height: 73px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+}
+
+.nav-links li {
+  list-style: none;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav-links li a.active {
+  color: #e77843;
+}
+
+.nav-links li a:hover {
+  color: #e77843;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger > div {
+  width: 25px;
+  height: 2px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1024px) {
+  nav-links {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #e77843;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+  .nav-links li a {
+    color: #fff;
+  }
+
+  .header-container {
+    padding-top: 40%;
+  }
+
+  .header-container h1 {
+    font-size: 12px;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes navLinkFadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(+45deg) translate(-5px, -5px);
+}
+
+/* header(jumbo image) */
+#\header {
+  /* height: 97vh;
+  background-color: red; */
+}
+
+.header-container {
+  background-image: url("assets/people.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding-top: 21%;
+}
+.header-container h1 {
+  color: white;
+  font-size: 60px;
+  padding: 40px;
+}
+/* desc */
+.desc {
+  background-color: #ffffff;
+  text-align: center;
+  min-height: fit-content;
+}
+.item {
+  float: left;
+  width: 50%;
+}
+.left h2 {
+  margin-top: 5%;
+  color: #e77843;
+  font-family: "Open Sans";
+}
+.left p {
+  width: 60%;
+  line-height: 200%;
+  display: inline-block;
+}
+.right {
+  background-color: #a5232d;
+}
+.right p {
+  color: #ffffff;
+  width: 80%;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 15px;
+}
+.card-gambar {
+  margin-top: 5%;
+  width: 50%;
+  float: left;
+}
+.card-gambar img {
+  width: 50%;
+  text-align: center;
+}
+
+/*dokumentasi*/
+.document{
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.document .right{
+    float: right;
+    width: 50%;
+}
+
+.document .left{
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    background-color: #E77843;
+    padding: 30px 0px;
+}
+
+.kegiatan-card{
+    flex: auto;
+    width: 50%;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 10px;
+}
+
+.document .right h2{
+    color: #A5232D;
+    margin-top: 10px;
+}
+
+.document .right p{
+    line-height: 200%;
+    width: 60%;
+    display: inline-block;
+}
+
+.document .text{
+    padding-top: 80px;
+}
+
+/*podcast+news*/
+.podcast h2 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.news h2 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.podcast img {
+    cursor: pointer;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.news {
+    padding: 0px 20px;
+}
+.card-news {
+    float: left;
+    width: 33.33%;
+    
+}
+.card-news img {
+    max-width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-news {
+    color: white;
+    background-color: #E77843;
+    display: inline-block;
+    padding: 8px 70px;
+    border-radius: 50px;
+}
+.card-news h3 {
+    text-align: center;
+}
+.txt-news {
+    text-align: center;
+    width: auto;
+    padding: 0px 35px;
+}
+.btn {
+    width: 100%;
+    margin: 0;
+    display: inline-block;
+    padding: 0px 5px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+/*footer*/
+footer {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer-top {
+    clear: both;
+    overflow: auto;
+    background: #E77843;
+}
+  
+  .rectangle-white {
+    float:left;
+    padding: 30px 70px;
+    background: #FFFFFF;
+}
+  
+  .rectangle-white .logo img {
+    height: 75px;
+    width: 75px;
+    margin-right: 15px;
+}
+  
+.rectangle-white p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 26px;
+    color: #000000;
+    margin: 36px 0;
+}
+  
+  .rectangle-white .sosmed img {
+    width: 35px;
+    height: 35px;
+}
+  
+  .rectangle-white .sosmed a {
+    margin-right: 10px;
+}
+  
+  .rectangle-orange {
+    float: left;
+    color: #FFFFFF;
+    padding: 20px 68px;
+}
+  
+  .rectangle-orange p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+  
+  .rectangle-orange ul {
+    font-size: 16px;
+    list-style: none;
+    padding: 0;
+    clear: both;
+    overflow: auto;
+}
+  
+  .rectangle-orange a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+  
+  .rectangle-orange li {
+    margin-bottom: 20px;
+    float: left;
+    width: 50%;
+}
+  
+  .footer-bottom {
+    background: #A5232D;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
